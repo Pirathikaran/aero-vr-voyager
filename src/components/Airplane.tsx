@@ -14,7 +14,11 @@ export const Airplane = (props: any) => {
   });
 
   return (
-    <mesh {...props} ref={meshRef}>
+    <mesh 
+      ref={meshRef} 
+      position={props.position} 
+      scale={Array.isArray(props.scale) ? props.scale : [props.scale, props.scale, props.scale]}
+    >
       {/* Fuselage */}
       <cylinderGeometry args={[1, 1, 10, 32]} />
       <meshStandardMaterial color="#E0E0E0" metalness={0.7} roughness={0.2} />
@@ -32,7 +36,7 @@ export const Airplane = (props: any) => {
       </mesh>
       
       {/* Tail */}
-      <mesh position={[0, -5, 0]} rotation={[0, 0, 0]}>
+      <mesh position={[0, -5, 0]}>
         <boxGeometry args={[0.5, 2, 2]} />
         <meshStandardMaterial color="#D0D0D0" metalness={0.5} roughness={0.3} />
       </mesh>
