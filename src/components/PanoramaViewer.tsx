@@ -1,7 +1,7 @@
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Environment, useTexture } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
 // Internal component for the panorama sphere
